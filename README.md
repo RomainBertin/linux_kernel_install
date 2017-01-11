@@ -6,20 +6,49 @@ Little script for quickly create a debuggable linux kernel.
 
 - cpio 
 - qemu (for qemu-system-x86_64)
+- tar
+- make
+- make
 - gdb (for debugging purpose)
 
 
 ##Installation process
 
 Execute the script with the output directory in parameter, this one must be writable. 
+At the end of the script, run.sh should be present in the output directory. 
 
 ```bash
 chmod +x installer.sh 
 ./installer.sh /tmp/installDir
 ```
 
-##To know
+##Launching the linux kernel
 
-By default the script is configured to install linux 3.13.6. 
+By default run.sh execute qemu in debugging mode with -S s 
+you can remove this parameter for disabling the debug mode. 
 
+## Remote debugging with gdb 
+
+As mentioned above, -S s should be present in the qemu command for be able to debug the kernel. 
+YOU HAVE TO LAUNCH THESE COMMAND BEFORE EXECUTING run.sh 
+
+```bash 
+$ gdb 
+> set architecture i386:x86-64
+> file /tmp/installDir/vmlinux
+> target remote :1234
+> load /tmp/installDir/vmlinux
+```
+
+In another shell
+
+```bash 
+run.sh
+```
+
+More about kernel debugging at http://elinux.org/Debugging_The_Linux_Kernel_Using_Gdb
+
+##By default
+
+The installation script is configured to install linux 3.13.6. 
 You will need to update this data for installing another version. 
