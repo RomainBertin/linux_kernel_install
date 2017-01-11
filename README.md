@@ -24,8 +24,7 @@ chmod +x installer.sh
 
 ##Launching the linux kernel
 
-By default run.sh execute qemu in debugging mode with -S s 
-you can remove this parameter for disabling the debug mode. 
+By default run.sh execute qemu in debugging mode with -S s. You can remove this parameter to disable this mode. 
 
 ## Remote debugging with gdb 
 
