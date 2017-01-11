@@ -50,4 +50,4 @@ More about kernel debugging at http://elinux.org/Debugging_The_Linux_Kernel_Usin
 ##By default
 
 The installation script is configured to install linux 3.13.6. 
-You will need to update this data for installing another version. 
+You will need to update this data to install another kernel version. 
