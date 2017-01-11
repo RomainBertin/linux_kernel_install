@@ -21,4 +21,5 @@ chmod +x installer.sh
 ##To know
 
 By default the script is configured to install linux 3.13.6. 
+
 You will need to update this data for installing another version. 
