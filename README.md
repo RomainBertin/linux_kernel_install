@@ -42,7 +42,7 @@ $ gdb
 In another shell
 
 ```bash 
-run.sh
+./run.sh
 ```
 
 More about kernel debugging at http://elinux.org/Debugging_The_Linux_Kernel_Using_Gdb
