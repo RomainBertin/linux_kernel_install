@@ -8,7 +8,7 @@ Little script for quickly create a debuggable linux kernel.
 - qemu (for qemu-system-x86_64)
 - tar
 - make
-- make
+- gzip
 - gdb (for debugging purpose)
 
 
